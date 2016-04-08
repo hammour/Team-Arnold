@@ -98,6 +98,10 @@ $ind-col-width: (($tot-width) - ($gut-width) * ($num-col - 1)) / $num-col;
   .col-md-12 {
     @include grid(12);
   }
+
+  article:nth-child(even) {
+    margin-right: 0;
+  }
 }
 
 //LARGE SCREEN STYLES
@@ -138,5 +142,12 @@ $ind-col-width: (($tot-width) - ($gut-width) * ($num-col - 1)) / $num-col;
   }
   .col-lg-12 {
     @include grid(12);
+  }
+
+  article:nth-child(even) {
+    margin-right: $gut-width;
+  }
+  article:nth-child(3n) {
+    margin-right: 0;
   }
 }
