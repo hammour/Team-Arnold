@@ -92,12 +92,8 @@ main {
 		}
 		
 		.votes {
-			background: $color-primary-light;
-			border-radius: 50%;
 			display: block;
-			height: 48px;
-			padding: 1rem;
-			width: 48px;
+			margin: 0 auto;
 			text-align: center;
 
 		}
@@ -114,7 +110,7 @@ main {
 //MAIN BREAKPOINTS
 
 @media (min-width: 900px) {
-	
+
 }
 
 
