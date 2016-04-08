@@ -1,25 +1,54 @@
+/*
+==================
+HEADER
+==================
+*/
+
 .siteHeader {
 	background: url(http://1.bp.blogspot.com/-dYygGq-7_p8/UHcSQiyBd5I/AAAAAAAADl4/14FNi47gAhU/s1600/Actor-pictures-arnold-schwarzenegger-wallpapers-hd-arnold-schwarzenegger-wallpaper-13.jpg) 0 0 no-repeat;
 	background-size: cover;
-	padding: 6rem 0;
 
 	.menuToggle {
 		color: $color-text;
+		padding: 1rem 0 0 1rem;
 	}
 	.mainNav {
 		display: none;
 	}
-	.searchBar {
-		margin: 0 auto;
-		width: 80%;
-	}
-	.submitQuote {
-		text-align: right;
-		width: 80%;
+	section {
+		padding: 6rem 0;
 
-		a {
-			background: $color-primary;
-			padding: 0.5rem 1rem;
+		.searchBar {
+			margin: 1.5rem auto;
+			overflow: hidden;
+			width: 60%;
+
+			input[type='text'] {
+				border: none;
+				float: left;
+				margin: 0;
+				padding: 1rem 0.5rem;
+				width: 75%;
+			}
+			input[type='submit'] {
+				background: $color-accent;
+				border: none;
+				float: left;
+				margin: 0;
+				padding: 1rem;
+				width: 25%;
+			}
+		}
+		.submitQuote {
+			margin: 1.5rem 0;
+			text-align: right;
+			width: 80%;
+
+			a {
+				border: 2px solid $color-accent;
+				color: $color-accent;
+				padding: 1rem 1rem;
+			}
 		}
 	}
 }
