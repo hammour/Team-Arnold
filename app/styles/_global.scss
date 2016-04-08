@@ -26,6 +26,11 @@ footer {
 	background: $color-primary-dark;
 }
 
+.row {
+	margin: 1rem 0;
+	overflow: hidden;
+}
+
 .button {
 	background: $color-accent;
 	color: $color-text-light;
@@ -39,7 +44,6 @@ footer {
 .tabs {
 	background: $color-primary-dark;
 	color: $color-text-light;
-	margin-bottom: 1rem;
 	overflow: hidden;
 
 	.active {
@@ -74,14 +78,18 @@ footer {
 main {
 	margin: 0 auto;
 	overflow: hidden;
-	width: 90%;
+	width: 95%;
 
 	.card {
 		border-bottom: 2px solid $color-divider;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-		padding: 1rem 0;
+		padding: 1rem;
 		overflow: hidden;
+
+		p {
+			margin: 0;
+		}
 		
 		.votes {
 			background: $color-primary-light;
@@ -102,3 +110,39 @@ main {
 
 	}
 }
+
+//MAIN BREAKPOINTS
+
+@media (min-width: 900px) {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
