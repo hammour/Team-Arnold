@@ -14,6 +14,7 @@ html {
 }
 
 body {
+	background: $color-bg;
 	font-family: $font-body;
 }
 
@@ -21,6 +22,83 @@ img {
 	max-width: 100%;
 }
 
-.row {
+footer {
+	background: $color-primary-dark;
+}
+
+.button {
+	background: $color-accent;
+	color: $color-text-light;
+	display: block;
+	padding: 0.5rem 1rem;
+	text-align: center;
+}
+
+//TABS
+
+.tabs {
+	background: $color-primary-dark;
+	color: $color-text-light;
+	margin-bottom: 1rem;
 	overflow: hidden;
+
+	.active {
+		border-bottom: 2px solid $color-accent;
+	}
+
+	& > ul {
+		float: left;
+		padding: 0;
+		width: 60%;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			margin-left: 1rem;
+		}
+	}
+	div {
+		float: left;
+		padding: 1rem 0;
+		text-align: center;
+		width: 40%;
+
+		ul {
+			display: none;
+		}
+	}
+}
+
+//MAIN
+
+main {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 90%;
+
+	.card {
+		border-bottom: 2px solid $color-divider;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 1rem 0;
+		overflow: hidden;
+		
+		.votes {
+			background: $color-primary-light;
+			border-radius: 50%;
+			display: block;
+			height: 48px;
+			padding: 1rem;
+			width: 48px;
+			text-align: center;
+
+		}
+
+		.view {
+			@extend .button;
+			float: right;
+			width: 10rem;
+		}
+
+	}
 }

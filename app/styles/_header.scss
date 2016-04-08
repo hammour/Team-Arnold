@@ -21,7 +21,7 @@ HEADER
 		.searchBar {
 			margin: 1.5rem auto;
 			overflow: hidden;
-			width: 60%;
+			width: 75%;
 
 			input[type='text'] {
 				border: none;
@@ -40,6 +40,7 @@ HEADER
 			}
 		}
 		.submitQuote {
+			display: none;
 			margin: 1.5rem 0;
 			text-align: right;
 			width: 80%;
