@@ -1,5 +1,6 @@
-@import 'variables';
-
-body {
-  background: $light-grey;
-}
+@import 'normalize',
+		'variables',
+		'grid',
+		'global',
+		'header',
+		'footer';

@@ -1,0 +1,25 @@
+.siteHeader {
+	background: url(http://1.bp.blogspot.com/-dYygGq-7_p8/UHcSQiyBd5I/AAAAAAAADl4/14FNi47gAhU/s1600/Actor-pictures-arnold-schwarzenegger-wallpapers-hd-arnold-schwarzenegger-wallpaper-13.jpg) 0 0 no-repeat;
+	background-size: cover;
+	padding: 6rem 0;
+
+	.menuToggle {
+		color: $color-text;
+	}
+	.mainNav {
+		display: none;
+	}
+	.searchBar {
+		margin: 0 auto;
+		width: 80%;
+	}
+	.submitQuote {
+		text-align: right;
+		width: 80%;
+
+		a {
+			background: $color-primary;
+			padding: 0.5rem 1rem;
+		}
+	}
+}
