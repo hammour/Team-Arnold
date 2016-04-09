@@ -1,0 +1,144 @@
+
+/*
+==================
+GLOBAL
+==================
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	background: $color-bg;
+	font-family: $font-body;
+}
+
+img {
+	max-width: 100%;
+}
+
+footer {
+	background: $color-primary-dark;
+}
+
+.row {
+	margin: 1rem 0;
+	overflow: hidden;
+}
+
+.button {
+	background: $color-accent;
+	color: $color-text-light;
+	display: block;
+	padding: 0.5rem 1rem;
+	text-align: center;
+}
+
+//TABS
+
+.tabs {
+	background: $color-primary-dark;
+	color: $color-text-light;
+	overflow: hidden;
+
+	.active {
+		border-bottom: 2px solid $color-accent;
+	}
+
+	& > ul {
+		float: left;
+		padding: 0;
+		width: 60%;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			margin-left: 1rem;
+		}
+	}
+	div {
+		float: left;
+		padding: 1rem 0;
+		text-align: center;
+		width: 40%;
+
+		ul {
+			display: none;
+		}
+	}
+}
+
+//MAIN
+
+main {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 95%;
+
+	.card {
+		border-bottom: 2px solid $color-divider;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 1rem;
+		overflow: hidden;
+
+		p {
+			margin: 0;
+		}
+		
+		.votes {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+
+		}
+
+		.view {
+			@extend .button;
+			float: right;
+			width: 10rem;
+		}
+
+	}
+}
+
+//MAIN BREAKPOINTS
+
+@media (min-width: 900px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

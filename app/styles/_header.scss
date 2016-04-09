@@ -1,0 +1,105 @@
+/*
+==================
+HEADER
+==================
+*/
+
+.siteHeader {
+	background: url(http://1.bp.blogspot.com/-dYygGq-7_p8/UHcSQiyBd5I/AAAAAAAADl4/14FNi47gAhU/s1600/Actor-pictures-arnold-schwarzenegger-wallpapers-hd-arnold-schwarzenegger-wallpaper-13.jpg) 0 0 no-repeat;
+	background-size: cover;
+
+	.menuToggle {
+		color: $color-text;
+		padding: 1rem 0 0 1rem;
+	}
+	.mainNav {
+		display: none;
+	}
+	section {
+		padding: 6rem 0;
+
+		.searchBar {
+			margin: 1.5rem auto;
+			overflow: hidden;
+			width: 75%;
+
+			input[type='text'] {
+				border: none;
+				float: left;
+				margin: 0;
+				padding: 1rem 0.5rem;
+				width: 75%;
+			}
+			input[type='submit'] {
+				background: $color-accent;
+				border: none;
+				float: left;
+				margin: 0;
+				padding: 1rem;
+				width: 25%;
+			}
+		}
+		.submitQuote {
+			display: none;
+		}
+	}
+}
+
+//HEADER BREAKPOINTS
+
+@media (min-width: 900px) {
+	.siteHeader {
+
+		section {
+			padding: 12rem 0;
+
+			.searchBar {
+				width: 50%;
+			}
+
+			.submitQuote {
+				display: block;
+				margin: 1.5rem auto;
+				text-align: right;
+				width: 50%;
+
+				a {
+					border: 2px solid $color-accent;
+					color: $color-accent;
+					padding: 1rem 2rem;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
