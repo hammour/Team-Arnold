@@ -146,7 +146,7 @@ main {
 @media (min-width: 900px) {
 
 	.face {
-		width: 50%;
+		width: 40%;
 	}
 	.generate span:last-child {
 		display: inline;
@@ -157,7 +157,45 @@ main {
 
 }
 
+//FEATURED
 
+.featureHeader {
+	background: red;
+
+	.heroText {
+		padding: 5rem 0;
+	}
+
+	h1,
+	p {
+		text-align: center;
+	}
+}
+
+.quoteImage {
+	background: url(http://www.wow247.co.uk/wp-content/uploads/2014/04/arnold-schwarzenegger-the.jpg) 0 0 no-repeat;
+	background-size: cover;
+	padding: 10rem 0;
+}
+
+.quoteInfo {
+
+	p {
+		font-size: 2rem;
+		margin: 0 auto;
+		width: 80%;
+
+		span {
+			font-size: 4rem;
+		}
+	}
+}
+
+.buttonWrapper {
+	margin: 1rem auto;
+	width: 80%;
+
+}
 
 
 
