@@ -11,6 +11,14 @@ HEADER
 	display: none;
 }
 
+.heroText {
+    padding: 2rem 0;
+
+    h1,
+	p {
+    	text-align: center;
+	}
+}
 
 //INDEX PAGE
 
@@ -18,13 +26,6 @@ HEADER
 	background: url(http://1.bp.blogspot.com/-dYygGq-7_p8/UHcSQiyBd5I/AAAAAAAADl4/14FNi47gAhU/s1600/Actor-pictures-arnold-schwarzenegger-wallpapers-hd-arnold-schwarzenegger-wallpaper-13.jpg) 0 0 no-repeat;
 	background-size: cover;
 
-	.menuToggle {
-		color: $color-text;
-		padding: 1rem 0 0 1rem;
-	}
-	.mainNav {
-		display: none;
-	}
 	section {
 		padding: 6rem 0;
 

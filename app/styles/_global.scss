@@ -23,6 +23,8 @@ img {
 
 footer {
     background: $color-primary-dark;
+    color: $color-text-light;
+    padding: 1rem 0.5rem;
 }
 
 .row {
@@ -38,14 +40,6 @@ footer {
     text-align: center;
 }
 
-.heroText {
-    padding: 5rem 0;
-
-    h1,
-	p {
-    	text-align: center;
-	}
-}
 
 //TABS
 .tabs {
