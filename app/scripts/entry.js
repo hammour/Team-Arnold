@@ -64,9 +64,9 @@ function getQuotesFromApi(url){
 }
 
 
+sortByNew();
 
-
-getQuotesFromApi(currentUrl);
+//getQuotesFromApi(currentUrl);
 
 
 $('.searchSubmit').on('click',()=>{searchData($('.searchInput').val() )});
