@@ -173,16 +173,37 @@ main {
 .selectorWrapper {
     margin: 1rem auto;
     overflow: hidden;
-    width: 60%;
+    width: 90%;
 }
 
 .pageSelector:first-child {
     float: left;
     width: 48%;
+
+    .fa {
+        padding-right: 1.2rem;
+
+    }
 }
 .pageSelector:last-child {
     float: right;
     width: 48%;
+
+    .fa {
+        padding-left: 1.75rem;
+    }
+}
+
+@media (min-width: 650px) {
+    .selectorWrapper {
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+     .selectorWrapper {
+        width: 30%;
+    }   
 }
 
 //MAIN BREAKPOINTS
