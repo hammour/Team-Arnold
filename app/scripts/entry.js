@@ -45,7 +45,7 @@ function getQuotesFromApi(url){
                                 <img src="${quote.get('quote_image')}" alt="">
                             </div>
                             <div class="col-sm-8">
-                                <p>${quote.get('quote_body').substring(0,60)}</p>
+                                <p>${quote.get('quote_body').substring(0,90)}</p>
                             </div>
                             <div class="col-sm-2">
                                 <span class="votes">${quote.get('best_votes_count')} votes</span>
