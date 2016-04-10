@@ -4,31 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>Best Arnold Quotes | Browse</title>
+    <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <header class="siteHeader">
-	    <div class="menuToggle">Menu</div>
-	    <nav class="mainNav">
-	        <ul>
-	            <li><a href="#">Home</a></li>
-	            <li><a href="#">Browse</a></li>
-	            <li><a href="#">Random</a></li>
-	            <li><a href="#">Submit</a></li>
-	        </ul>
-	    </nav>
-	    <section>
-	        <div class="searchBar">
-	            <input class ="searchInput" type="text">
-	            <input class = "searchSubmit" type="submit">
-	        </div>
-	        <div class="submitQuote">
-	            <a href="#">Submit Quote</a>
-	        </div>
-	    </section>
-	</header>
-	<nav class="tabs">
+ <!--    <nav class="tabs">
         <ul>
             <li class="active">Action</li>
             <li>Comedy</li>
@@ -41,12 +21,30 @@
                 <li>Newest</li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+    <header class="siteHeader">
+	    <div class="menuToggle">Menu</div>
+	    <nav class="mainNav">
+	        <ul>
+	            <li><a href="#">Home</a></li>
+	            <li><a href="#">Browse</a></li>
+	            <li><a href="#">Random</a></li>
+	            <li><a href="#">Submit</a></li>
+	        </ul>
+	    </nav>
+	    <section>
+	        <div class="searchBar">
+	            <input type="text">
+	            <input type="submit">
+	        </div>
+	        <div class="submitQuote">
+	            <a href="#">Submit Quote</a>
+	        </div>
+	    </section>
+	</header>
     <main>
-
-    
+    <article class="quote">This is a test</article>
 <!--         <article class="quote col-sm-12 col-md-6 col-lg-4">
->>>>>>> master
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -64,7 +62,7 @@
                 </div>
             </div>
         </article>
-        <article class="col-sm-12 col-md-6 col-lg-4 quote">
+        <article class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -82,7 +80,7 @@
                 </div>
             </div>
         </article>
-        <article class="col-sm-12 col-md-6 col-lg-4 quote">
+        <article class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -100,7 +98,7 @@
                 </div>
             </div>
         </article>
-        <article class="col-sm-12 col-md-6 col-lg-4 quote">
+        <article class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -118,7 +116,7 @@
                 </div>
             </div>
         </article>
-        <article class="col-sm-12 col-md-6 col-lg-4 quote">
+        <article class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -136,7 +134,7 @@
                 </div>
             </div>
         </article>
-        <article class="col-sm-12 col-md-6 col-lg-4 quote">
+        <article class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -154,7 +152,7 @@
                 </div>
             </div>
         </article>
-        <article class="col-sm-12 col-md-6 col-lg-4 quote">
+        <article class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="row">
                     <div class="col-sm-2">
@@ -176,6 +174,7 @@
     <footer>
 	    We don't own any of these images 2016
 	</footer>
+    <script src="bundle.js"></script>
 </body>
 
 </html>
