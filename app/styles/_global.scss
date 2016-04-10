@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: $color-bg;
+    background: $color-bg-secondary;
     font-family: $font-body;
 }
 
@@ -39,14 +39,15 @@ footer {
 }
 
 .button {
-    border: 2px solid #000;
-    color: $color-text;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    cursor: pointer;
     display: block;
     font-family: $font-headings;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 
     &:hover {
         background: $color-accent;
@@ -62,16 +63,22 @@ footer {
     color: $color-text-light;
     overflow: hidden;
     .active {
-        border-bottom: 2px solid $color-accent;
+        border-bottom: 3px solid $color-accent-light;
     }
     & > ul {
         float: left;
+        margin: 0;
         padding: 0;
         width: 60%;
         li {
             list-style: none;
             display: inline-block;
             margin-left: 1rem;
+            padding: 1rem;
+
+            &:first-child {
+                margin-left: 5%;
+            }
         }
     }
     div {
@@ -85,28 +92,85 @@ footer {
     }
 }
 
+.filterWrapper {
+    margin: 2rem 0 1rem 2.5%;
+
+    ul {
+        background: white;
+        // display: none;
+        list-style: none;
+        padding: 0.5rem;
+        width: 150px;
+
+        li {
+            margin: 1rem 0;
+            padding: 0.5rem;
+
+            &:hover {
+                background: $color-accent-light;
+                color: $color-text-light;
+            }
+        }
+    }
+}
+
+.filter {
+    background: $color-divider;
+    color: $color-text-light;
+    padding: 1rem 2rem;
+
+    .fa {
+        font-size: 1rem;
+        padding-left: 2rem;
+        transition: 1 linear;
+
+    }
+
+    .filterToggle {
+        cursor: pointer;
+    }
+
+    .filterToggle:hover {
+        color: $color-accent-light;
+    }
+}
+
 //MAIN
 main {
     margin: 0 auto;
     overflow: hidden;
     width: 95%;
     .card {
-        border-bottom: 2px solid $color-divider;
+        background: $color-bg;
+        height: 16rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        padding: 1rem;
+        padding-bottom: 1rem;
         overflow: hidden;
+
+        .row {
+            margin: 0 0 2rem 0;
+        }
         p {
+            font-size: 1.5rem;
             margin: 0;
+            overflow: hidden;
+            padding: 1rem 0;
+            text-overflow: ellipsis;
+
         }
         .votes {
+            background: $color-accent-light;
+            color: $color-text-light;
             display: block;
-            margin: 0 auto;
+            padding: 0.5rem;
             text-align: center;
+
         }
         .view {
             @extend .button;
             float: right;
+            margin-right: 1rem;
             width: 10rem;
         }
     }
@@ -117,16 +181,38 @@ main {
 .selectorWrapper {
     margin: 1rem auto;
     overflow: hidden;
-    width: 60%;
+    width: 90%;
 }
+
 
 .pageSelector:first-child {
     float: left;
     width: 48%;
+
+    .fa {
+        padding-right: 1.2rem;
+
+    }
 }
 .pageSelector:last-child {
     float: right;
     width: 48%;
+
+    .fa {
+        padding-left: 1.75rem;
+    }
+}
+
+@media (min-width: 650px) {
+    .selectorWrapper {
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+     .selectorWrapper {
+        width: 30%;
+    }   
 }
 
 //MAIN BREAKPOINTS

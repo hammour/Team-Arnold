@@ -3,10 +3,43 @@
 HEADER
 ==================
 */
+
+header {
+	overflow:hidden;
+	padding: 1rem;
+}
+
+.menuItem {
+	width: 49%;
+	float: left;
+}
 .menuToggle {
-	color: $color-text;
+	background: $color-text;
+	color: $color-text-light;
+	cursor: pointer;
+	float: left;
 	font-family: $font-headings;
-	padding: 1rem 0 0 1rem;
+	padding: 1rem;
+	text-align: center;
+
+	&:hover {
+		background: $color-accent-light;
+	}
+}
+
+.menuSubmit {
+	border: 2px solid $color-accent-light;
+	color: $color-text-light;
+	cursor: pointer;
+	display:none;
+	float: right;
+	font-family: $font-headings;
+	padding: 1rem;
+	text-align: center;
+
+	&:hover {	
+		color: $color-accent-light;
+	}
 }
 .mainNav {
 	display: none;
@@ -21,10 +54,16 @@ HEADER
 	}
 }
 
+@media (min-width: 650px) {
+	.menuSubmit {
+		display: block;
+	}
+}
+
 //INDEX PAGE
 
 .siteHeader {
-	background: url(http://sizlingpeople.com/wp-content/uploads/2016/03/Arnold-Schwarzenegger-Movies-1.jpg) 0 0 no-repeat;
+	background: url(https://49.media.tumblr.com/a98b31c4835525b3ac3d6f4f94121723/tumblr_o3hjpaYNcF1v4u49oo1_500.gif) 0 0 no-repeat;
 	background-size: cover;
 
 	section {
@@ -33,37 +72,54 @@ HEADER
 		.searchBar {
 			margin: 1.5rem auto;
 			overflow: hidden;
-			width: 75%;
+			width: 90%;
 
-			input[type='text'] {
+			.searchInput {
 				border: none;
 				float: left;
+				font-family: $font-headings;
 				margin: 0;
-				padding: 1rem 0.5rem;
-				width: 75%;
+				opacity: 0.5;
+				padding: 1rem 1rem;
+				width: 70%;
 			}
-			input[type='submit'] {
+			.searchSubmit {
 				background: $color-accent;
 				border: none;
+				color: $color-text-light;
 				float: left;
+				font-family: $font-headings;
 				margin: 0;
 				padding: 1rem;
-				width: 25%;
+				width: 30%;
+
+				&:hover {
+					background: lighten($color-accent, 5%);
+				}
 			}
-		}
-		.submitQuote {
-			display: none;
 		}
 	}
 }
 
 //HEADER BREAKPOINTS
 
-@media (min-width: 900px) {
+@media (min-width: 650px) {
 	.siteHeader {
 
 		section {
 			padding: 12rem 0;
+
+			.searchBar {
+				width: 75%;
+			}
+		}
+	}
+}
+@media (min-width: 900px) {
+	.siteHeader {
+
+		section {
+			padding: 15rem 0 9rem 0;
 
 			.searchBar {
 				width: 50%;
