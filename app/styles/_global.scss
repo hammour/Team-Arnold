@@ -30,7 +30,7 @@ h2 {
 footer {
     background: $color-primary-dark;
     color: $color-text-light;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
 }
 
 .row {
@@ -97,7 +97,7 @@ footer {
 
     ul {
         background: white;
-        // display: none;
+        display: none;
         list-style: none;
         padding: 0.5rem;
         width: 150px;
@@ -154,7 +154,6 @@ main {
         p {
             font-size: 1.5rem;
             margin: 0;
-            overflow: hidden;
             padding: 1rem 0;
             text-overflow: ellipsis;
 
