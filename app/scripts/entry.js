@@ -122,6 +122,10 @@ function filterByCat(cat){
 function nextPage(){
     console.log('nextPage');
     $('main').text('');
+    currentPage++
+    currentUrl=currentUrl+'&page='currentPage;
+    getQuotesFromApi(currentUrl);
+
 
 
 };
@@ -131,6 +135,7 @@ function prevPage(){
     $('main').text('');
 
 };
+
 
 //$('.next').on('click',function(){nextPage()});
 
