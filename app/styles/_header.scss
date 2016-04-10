@@ -5,26 +5,28 @@ HEADER
 */
 .menuToggle {
 	color: $color-text;
+	font-family: $font-headings;
 	padding: 1rem 0 0 1rem;
 }
 .mainNav {
 	display: none;
 }
 
+.heroText {
+    padding: 2rem 0;
+
+    h1,
+	p {
+    	text-align: center;
+	}
+}
 
 //INDEX PAGE
 
 .siteHeader {
-	background: url(http://1.bp.blogspot.com/-dYygGq-7_p8/UHcSQiyBd5I/AAAAAAAADl4/14FNi47gAhU/s1600/Actor-pictures-arnold-schwarzenegger-wallpapers-hd-arnold-schwarzenegger-wallpaper-13.jpg) 0 0 no-repeat;
+	background: url(http://sizlingpeople.com/wp-content/uploads/2016/03/Arnold-Schwarzenegger-Movies-1.jpg) 0 0 no-repeat;
 	background-size: cover;
 
-	.menuToggle {
-		color: $color-text;
-		padding: 1rem 0 0 1rem;
-	}
-	.mainNav {
-		display: none;
-	}
 	section {
 		padding: 6rem 0;
 
