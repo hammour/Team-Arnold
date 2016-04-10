@@ -10,7 +10,7 @@ let currentPage=1;
 let currentUrl='https://hidden-beach-47358.herokuapp.com/api/quotes?page=1';
 let defaultUrl='https://hidden-beach-47358.herokuapp.com/api/quotes?page=1';
 
-function getQuotesFromApi(url,pageNumber){
+function getQuotesFromApi(url){
 
         const QuotesModel = Backbone.Model.extend({
         defaults: {
@@ -33,7 +33,7 @@ function getQuotesFromApi(url,pageNumber){
 
       myTopQuotes.fetch({success:function (){
         console.log(myTopQuotes);
-        console.log(myTopQuotes.length);
+        
         myTopQuotes.each(function (quote) {
             
           
@@ -45,7 +45,7 @@ function getQuotesFromApi(url,pageNumber){
                                 <img src="${quote.get('quote_image')}" alt="">
                             </div>
                             <div class="col-sm-8">
-                                <p>${quote.get('quote_body')}</p>
+                                <p>${quote.get('quote_body').substring(0,60)}</p>
                             </div>
                             <div class="col-sm-2">
                                 <span class="votes">${quote.get('best_votes_count')} votes</span>
@@ -70,6 +70,7 @@ getQuotesFromApi(currentUrl);
 
 
 $('.searchSubmit').on('click',()=>{searchData($('.searchInput').val() )});
+//$('.searchSubmit').on('click',()=>{searchData($('.searchInput').val() )});
 
 
 
@@ -123,7 +124,7 @@ function nextPage(){
     console.log('nextPage');
     $('main').text('');
     currentPage++
-    currentUrl=currentUrl+'&page='currentPage;
+    currentUrl=currentUrl+'&page='+currentPage;
     getQuotesFromApi(currentUrl);
 
 
@@ -137,7 +138,7 @@ function prevPage(){
 };
 
 
-//$('.next').on('click',function(){nextPage()});
+$('.next').on('click',function(){nextPage()});
 
 //console.log(jQuery.get('https//hidden-beach-47358.herokuapp.com/api/quotes/total_pages'));
 
