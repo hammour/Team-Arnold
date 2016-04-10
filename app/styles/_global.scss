@@ -103,6 +103,23 @@ main {
     }
 }
 
+//PAGES
+
+.selectorWrapper {
+    margin: 1rem auto;
+    overflow: hidden;
+    width: 60%;
+}
+
+.pageSelector:first-child {
+    float: left;
+    width: 48%;
+}
+.pageSelector:last-child {
+    float: right;
+    width: 48%;
+}
+
 //MAIN BREAKPOINTS
 @media (min-width: 900px) {}
 
