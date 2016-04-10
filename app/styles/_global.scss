@@ -126,6 +126,10 @@ footer {
 
     }
 
+    .filterToggle {
+        cursor: pointer;
+    }
+
     .filterToggle:hover {
         color: $color-accent-light;
     }
@@ -138,6 +142,7 @@ main {
     width: 95%;
     .card {
         background: $color-bg;
+        height: 16rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         padding-bottom: 1rem;
@@ -146,18 +151,21 @@ main {
         .row {
             margin: 0 0 2rem 0;
         }
-        // p {
-        //     margin: 0;
-        //     overflow: hidden;
-        //     padding: 1rem 0;
-        //     text-overflow: ellipsis;
-        // }
+        p {
+            font-size: 1.5rem;
+            margin: 0;
+            overflow: hidden;
+            padding: 1rem 0;
+            text-overflow: ellipsis;
+
+        }
         .votes {
             background: $color-accent-light;
             color: $color-text-light;
             display: block;
             padding: 0.5rem;
             text-align: center;
+
         }
         .view {
             @extend .button;
@@ -176,14 +184,6 @@ main {
     width: 90%;
 }
 
-.pageSelector {
-    border-color: $color-accent-light;
-    color: $color-text;
-
-    &:hover {
-        color: $color-accent-light;
-    }
-}
 
 .pageSelector:first-child {
     float: left;
