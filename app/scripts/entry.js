@@ -5,12 +5,16 @@ import Backbone from 'backbone';
 // // // sample data
  // console.log(topQuotesSample);
 
-function getQuotesFromApi(url){
+let numberOfPages=0;
+let currentPage=1;
+let currentUrl='https://hidden-beach-47358.herokuapp.com/api/quotes?page=1';
+let defaultUrl='https://hidden-beach-47358.herokuapp.com/api/quotes?page=1';
+
+function getQuotesFromApi(url,pageNumber){
 
         const QuotesModel = Backbone.Model.extend({
         defaults: {
-            src: 'https://www.drphillipscenter.org/resources/images/default.jpg',
-            caption: 'No Image Available'
+            
         },
         urlRoot: url,
         idAttribute: '_id'
@@ -22,14 +26,14 @@ function getQuotesFromApi(url){
 
     });
 
-    var newArray=[];
+
 
     const myTopQuotes = new allQuotesCollection();
 
 
       myTopQuotes.fetch({success:function (){
         console.log(myTopQuotes);
-
+        console.log(myTopQuotes.length);
         myTopQuotes.each(function (quote) {
             
           
@@ -62,21 +66,79 @@ function getQuotesFromApi(url){
 
 
 
-getQuotesFromApi('https://hidden-beach-47358.herokuapp.com/api/quotes');
+getQuotesFromApi(currentUrl);
 
 
 $('.searchSubmit').on('click',()=>{searchData($('.searchInput').val() )});
 
+
+
 function searchData(text){
+    var specialChars = "!@#$^&%*()+=-[]\/{}|:<>?,.";
+    for (var i = 0; i < specialChars.length; i++) {
+        text = text.replace(new RegExp("\\" + specialChars[i], 'gi'), '');
+    };
+    text = text.replace(' ','%20')
+    console.log(text);
+
     $('main').text('');
-    let url='https://hidden-beach-47358.herokuapp.com/api/quotes?search='+text;
+    let url=currentUrl+'&search='+text;
     getQuotesFromApi(url);
+    currentUrl=url;
 
 };
 
 
 
+function sortByNew(){
+    console.log('sortByNew');
+    $('main').text('');
+    let url= currentUrl+'&sort=newest';
+    getQuotesFromApi(url); 
+    currentUrl=url;
+};
 
+function sortByOld(){
+    console.log('sortByOld');
+    $('main').text('');
+    let url=currentUrl+'&sort=oldest';
+    getQuotesFromApi(url);
+    currentUrl=url;
+};
+function sortByBest(){
+    console.log('sortByBest');
+    $('main').text('');
+    let url=currentUrl+'&sort=best';
+    getQuotesFromApi(url);
+    currentUrl=url;
+};
+function filterByCat(cat){
+    console.log('filterByCat');
+    $('main').text('');
+    let url=currentUrl+'&category='+cat;
+    getQuotesFromApi(url);
+    currentUrl=url;
+};
+function nextPage(){
+    console.log('nextPage');
+    $('main').text('');
+
+
+};
+
+function prevPage(){
+    console.log('prevPage');
+    $('main').text('');
+
+};
+
+//$('.next').on('click',function(){nextPage()});
+
+//console.log(jQuery.get('https//hidden-beach-47358.herokuapp.com/api/quotes/total_pages'));
+
+// $.get( "https//hidden-beach-47358.herokuapp.com/api/quotes/total_pages", ( data )=> {
+//   console.log(data);
+// }, "json" );
 
 
 
