@@ -176,6 +176,15 @@ main {
     width: 90%;
 }
 
+.pageSelector {
+    border-color: $color-accent-light;
+    color: $color-text;
+
+    &:hover {
+        color: $color-accent-light;
+    }
+}
+
 .pageSelector:first-child {
     float: left;
     width: 48%;
