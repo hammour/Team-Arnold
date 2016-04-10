@@ -97,7 +97,7 @@ footer {
 
     ul {
         background: white;
-        // display: none;
+        display: none;
         list-style: none;
         padding: 0.5rem;
         width: 150px;
@@ -142,7 +142,7 @@ main {
     width: 95%;
     .card {
         background: $color-bg;
-        height: 16rem;
+        height: 19rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         padding-bottom: 1rem;
@@ -153,10 +153,12 @@ main {
         }
         p {
             font-size: 1.5rem;
+            height: 200px;
             margin: 0;
-            overflow: hidden;
-            padding: 1rem 0;
+            padding: 1rem 0 0 0;
+            text-overflow: clip;
             text-overflow: ellipsis;
+            text-overflow: "…";
 
         }
         .votes {
@@ -172,6 +174,7 @@ main {
             float: right;
             margin-right: 1rem;
             width: 10rem;
+            bottom: 0;
         }
     }
 }
