@@ -43,6 +43,31 @@ header {
 }
 .mainNav {
 	display: none;
+	background: $color-bg;
+	padding: 1rem;
+	width: 150px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+	}
+
+	li {
+		list-style: none;
+
+		a {
+			color: $color-text;
+			display: block;
+			padding: 0.5rem;
+			text-decoration: none;
+
+            &:hover {
+                background: $color-accent-light;
+                color: $color-text-light;
+            }
+		}
+	}
 }
 
 .heroText {

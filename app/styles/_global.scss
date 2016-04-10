@@ -38,6 +38,13 @@ footer {
     overflow: hidden;
 }
 
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
 .button {
     border: 2px solid $color-primary;
     color: $color-primary;
@@ -62,14 +69,13 @@ footer {
     background: $color-primary-dark;
     color: $color-text-light;
     overflow: hidden;
+
     .active {
         border-bottom: 3px solid $color-accent-light;
     }
     & > ul {
-        float: left;
         margin: 0;
         padding: 0;
-        width: 60%;
         li {
             list-style: none;
             display: inline-block;
@@ -298,8 +304,17 @@ main {
         width: 100%;
     }
     .inputMovie,
-    .inputQuote {
+    .inputQuote,
+    .inputCategory {
         margin-bottom: 1rem;
+    }
+
+    .inputCategory {
+        overflow: hidden;
+
+        .cBox {
+            display: inline-block;
+        }
     }
 }
 
