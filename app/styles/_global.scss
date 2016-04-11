@@ -297,7 +297,7 @@ main {
 //FORM SUBMIT
 .formWrapper {
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 2rem 0;
     width: 90%;
     input,
     textarea {
@@ -312,8 +312,23 @@ main {
     .inputCategory {
         overflow: hidden;
 
-        .cBox {
-            display: inline-block;
+    }
+
+    .cBox {
+        float: left;
+        width: 33%;
+    }
+
+    .submitQuote {
+        float: right;
+        width: 8rem;
+
+        .button {
+            background: transparent;
+
+            &:hover {
+                background: $color-primary;
+            }
         }
     }
 }
@@ -325,6 +340,12 @@ main {
 }
 
 @media (min-width: 900px) {
+    .heroText {
+        padding-bottom: 2rem;
+        h1{
+            padding: 6rem 0 2rem 0;
+        }
+    }
     .formWrapper {
         width: 40%;
     }
