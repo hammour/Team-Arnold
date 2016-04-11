@@ -5,7 +5,7 @@ import Backbone from 'backbone';
 // // // sample data
  // console.log(topQuotesSample);
 
-let numberOfPages=0;
+let contentOfPage=1;
 let currentPage=1;
 let currentUrl='https://hidden-beach-47358.herokuapp.com/api/quotes?page=1';
 let defaultUrl='https://hidden-beach-47358.herokuapp.com/api/quotes?page=1';
@@ -32,7 +32,7 @@ function getQuotesFromApi(url){
 
 
       myTopQuotes.fetch({success:function (){
-        console.log(myTopQuotes);
+        contentOfPage=myTopQuotes.length;
         
         myTopQuotes.each(function (quote) {
             
@@ -70,7 +70,8 @@ sortByNew();
 
 
 $('.searchSubmit').on('click',()=>{searchData($('.searchInput').val() )});
-//$('.searchSubmit').on('click',()=>{searchData($('.searchInput').val() )});
+$('.next').on('click',()=>{nextPage()});
+$('.previous').on('click',()=>{prevPage()});
 
 
 
@@ -121,83 +122,38 @@ function filterByCat(cat){
     currentUrl=url;
 };
 function nextPage(){
-    console.log('nextPage');
+    console.log('content is '+contentOfPage);
+    if (contentOfPage<1){
+        currentUrl=defaultUrl;
+        currentPage=0
+        contentOfPage=2;
+    }
     $('main').text('');
     currentPage++
     currentUrl=currentUrl+'&page='+currentPage;
     getQuotesFromApi(currentUrl);
+    console.log(currentPage);
+
 
 
 
 };
 
 function prevPage(){
-    console.log('prevPage');
+    console.log('content is '+contentOfPage);
+    if (contentOfPage<1){
+        currentUrl=defaultUrl;
+        contentOfPage=2;
+        currentPage=2;
+    }
+    if(currentPage<2){currentPage=2}
     $('main').text('');
+    currentPage=currentPage-1;
+    currentUrl=currentUrl+'&page='+currentPage;
+    getQuotesFromApi(currentUrl);
+    console.log(currentPage);
 
 };
-
-
-$('.next').on('click',function(){nextPage()});
-
-//console.log(jQuery.get('https//hidden-beach-47358.herokuapp.com/api/quotes/total_pages'));
-
-// $.get( "https//hidden-beach-47358.herokuapp.com/api/quotes/total_pages", ( data )=> {
-//   console.log(data);
-// }, "json" );
-
-
-
-// var quoteView = Backbone.View.extend({
-// 	tagName: 'article',
-// 	className: 'quote col-sm-12 col-md-6 col-lg-4',
-// 	// events: {
-// 	// 	// 'submit .view': 'quoteCanv'
-// 	// },
-// 	initialize: function(quoteObject) {
-//         this.quoteObject = quoteObject;
-//         this.render();
-		 
-// 	},
-// 	render: function() {
-// 		const template = `
-        
-//             <div class="card">
-//                 <div class="row">
-//                     <div class="col-sm-2">
-//                         <img src="${this.quoteObject.quote_image}" alt="">
-//                     </div>
-//                     <div class="col-sm-8">
-//                         <p>${this.quoteObject.quote_body}</p>
-//                     </div>
-//                     <div class="col-sm-2">
-//                         <span class="votes">${this.quoteObject.best_votes_count} votes</span>
-//                     </div>
-//                 </div>
-//                 <div class="col-sm-12">
-//                     <span class="view">View</span>
-//                 </div>
-//             </div>
-//          `;
-
-// 		this.$el.html(template);
-// 	},
-// 	quoteCanv: function(e) {
-// 		e.preventDefault();
-		
-// 	}
-// });
-
-// topQuotesSample.forEach((element)=>{
-//     var quote = new quoteView(element);
-//     $('main').append(quote.$el);
-// });
-
-
-
-
-
-//console.log(topQuotesSample[0]);
 
 
 
