@@ -71,7 +71,8 @@ header {
 }
 
 .heroText {
-    padding: 2rem 0;
+	color: $color-text-light;
+    padding-top: 6rem;
 
     h1,
 	p {
@@ -79,10 +80,25 @@ header {
 	}
 }
 
+.heroTextHome {
+	margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+	width: 50%;
+}
+
 @media (min-width: 650px) {
 	.menuSubmit {
 		display: block;
 	}
+}
+
+//SUBMIT PAGE
+
+.submitHeader {
+	background: url(https://media.giphy.com/media/a2fVCj2CudIiY/giphy.gif) 0 0 no-repeat;
+	background-size: cover;
+	padding-bottom: 7rem;
 }
 
 //INDEX PAGE
